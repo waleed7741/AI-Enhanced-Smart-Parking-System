@@ -1,0 +1,16 @@
+.App {
+  min-height: 100vh;
+  background: #0f172a;
+  position: relative;
+}
+
+/* Page Transitions */
+.page-container {
+  min-height: 100vh;
+  padding-top: 0;
+}
+
+.section-padding {
+  padding: 8rem 0;
+}
+

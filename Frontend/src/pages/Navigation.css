@@ -1,0 +1,347 @@
+.navigation-page {
+  display: flex;
+  height: calc(100vh - 64px);
+  width: 100%;
+  background: #0f172a;
+}
+
+/* Sidebar Styling */
+.nav-sidebar {
+  width: 380px;
+  background: #1e293b;
+  box-shadow: 4px 0 15px rgba(0,0,0,0.3);
+  display: flex;
+  flex-direction: column;
+  z-index: 100;
+  overflow: hidden;
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.nav-header {
+  padding: 24px;
+  background: #1e293b;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.nav-header h2 {
+  font-size: 1.4rem;
+  color: #f8fafc;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.nav-header h2 i {
+  color: #1D9BF0;
+}
+
+.btn-close {
+  background: rgba(255, 255, 255, 0.05);
+  border: none;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: #94a3b8;
+  transition: all 0.2s;
+}
+
+.btn-close:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: #f8fafc;
+}
+
+.dest-info {
+  color: #94a3b8;
+  margin: 0 0 16px 0;
+  font-size: 0.95rem;
+}
+
+.route-summary {
+  display: flex;
+  gap: 12px;
+}
+
+.summary-item {
+  flex: 1;
+  background: rgba(15, 23, 42, 0.5);
+  padding: 12px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.summary-item .label {
+  font-size: 0.75rem;
+  color: #64748b;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 600;
+}
+
+.summary-item .value {
+  font-size: 1.1rem;
+  color: #f8fafc;
+  font-weight: 700;
+}
+
+/* Instruction List */
+.instruction-list {
+  flex: 1;
+  overflow-y: auto;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  scrollbar-width: thin;
+  scrollbar-color: #334155 transparent;
+}
+
+.instruction-list::-webkit-scrollbar {
+  width: 6px;
+}
+
+.instruction-list::-webkit-scrollbar-thumb {
+  background-color: #334155;
+  border-radius: 20px;
+}
+
+.instruction-item {
+  display: flex;
+  gap: 16px;
+  padding: 16px;
+  background: rgba(30, 41, 59, 0.5);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  transition: all 0.2s;
+}
+
+.instruction-item.active {
+  background: rgba(29, 155, 240, 0.1);
+  border-color: #1D9BF0;
+  transform: scale(1.02);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.instruction-icon {
+  width: 44px;
+  height: 44px;
+  background: rgba(15, 23, 42, 0.5);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.active .instruction-icon {
+  background: #1D9BF0;
+}
+
+.active .instruction-icon i {
+  color: white;
+}
+
+.instruction-icon i {
+  font-size: 1.2rem;
+  color: #94a3b8;
+}
+
+.instruction-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.instruction-text {
+  font-size: 1rem;
+  color: #f8fafc;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.instruction-subtext {
+  font-size: 0.85rem;
+  color: #94a3b8;
+  margin-top: 4px;
+}
+
+.instruction-item.arrive {
+  background: rgba(16, 185, 129, 0.1);
+  border-color: #10b981;
+}
+
+.instruction-item.arrive .instruction-icon {
+  background: #10b981;
+}
+
+.instruction-item.arrive i {
+  color: white;
+}
+
+.loading-instructions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  color: #94a3b8;
+  gap: 16px;
+}
+
+.spinner {
+  width: 30px;
+  height: 30px;
+  border: 3px solid rgba(255, 255, 255, 0.1);
+  border-top-color: #1D9BF0;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.btn-finish {
+  margin: 24px;
+  padding: 16px;
+  background: #1D9BF0;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-finish:hover {
+  background: #0d8ae0;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(29, 155, 240, 0.3);
+}
+
+/* Map Styling */
+.nav-map-container {
+  flex: 1;
+  position: relative;
+}
+
+/* User Marker Styling */
+.user-marker-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.user-marker-inner {
+  width: 30px;
+  height: 30px;
+  background: #1D9BF0;
+  border: 3px solid #f8fafc;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  z-index: 2;
+}
+
+.user-marker-pulse {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background: rgba(29, 155, 240, 0.4);
+  border-radius: 50%;
+  animation: pulse 2s infinite;
+  z-index: 1;
+}
+
+@keyframes pulse {
+  0% { transform: scale(0.6); opacity: 1; }
+  100% { transform: scale(1.6); opacity: 0; }
+}
+
+/* Map Controls */
+.map-controls {
+  position: absolute;
+  bottom: 24px;
+  right: 24px;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.control-btn {
+  width: 48px;
+  height: 48px;
+  background: #1e293b;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  color: #94a3b8;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.control-btn:hover {
+  color: #f8fafc;
+  background: #334155;
+}
+
+.control-btn.active {
+  background: #1D9BF0;
+  color: white;
+  border-color: #1D9BF0;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .nav-sidebar {
+    width: 320px;
+  }
+}
+
+@media (max-width: 768px) {
+  .navigation-page {
+    flex-direction: column-reverse;
+  }
+  .nav-sidebar {
+    width: 100%;
+    height: 40vh;
+    box-shadow: 0 -4px 15px rgba(0,0,0,0.3);
+    border-right: none;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  .nav-map-container {
+    height: 60vh;
+  }
+  .nav-header {
+    padding: 16px 20px;
+  }
+  .instruction-list {
+    padding: 16px 20px;
+  }
+  .btn-finish {
+    margin: 16px 20px;
+  }
+}

@@ -1,0 +1,57 @@
+[
+  {
+    "id": 1,
+    "name": "Blue Area Parking",
+    "sector": "G-7, Islamabad",
+    "capacity": 150,
+    "available": 45,
+    "price": 50,
+    "latitude": 33.7077,
+    "longitude": 73.0645,
+    "status": "available"
+  },
+  {
+    "id": 2,
+    "name": "F-6 Markaz Parking",
+    "sector": "F-6, Islamabad",
+    "capacity": 200,
+    "available": 0,
+    "price": 60,
+    "latitude": 33.7297,
+    "longitude": 73.0744,
+    "status": "full"
+  },
+  {
+    "id": 3,
+    "name": "Centaurus Mall Parking",
+    "sector": "F-8, Islamabad",
+    "capacity": 1000,
+    "available": 320,
+    "price": 100,
+    "latitude": 33.7077,
+    "longitude": 73.0501,
+    "status": "available"
+  },
+  {
+    "id": 4,
+    "name": "Safa Gold Mall Parking",
+    "sector": "F-7, Islamabad",
+    "capacity": 300,
+    "available": 12,
+    "price": 80,
+    "latitude": 33.7171,
+    "longitude": 73.0561,
+    "status": "available"
+  },
+  {
+    "id": 5,
+    "name": "G-9 Markaz Parking",
+    "sector": "G-9, Islamabad",
+    "capacity": 400,
+    "available": 150,
+    "price": 40,
+    "latitude": 33.6844,
+    "longitude": 73.0179,
+    "status": "available"
+  }
+]
